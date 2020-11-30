@@ -1,8 +1,36 @@
 var startBtn = document.querySelector("#myBtn");
+var timeEl = document.querySelector("#time");
+
+startBtn.addEventListener('click', setTime)
 
 
-startBtn.addEventListener('click', myFunction)
+var secondsLeft = 10;
 
-function myFunction() {
-    console.log("HELLOOOO");
-}
+function setTime() {
+    question()
+    var timerInterval = setInterval(function() { 
+      secondsLeft--;
+      timeEl.textContent = secondsLeft + " seconds left.";
+  
+      if(secondsLeft === 0) {
+        clearInterval(timerInterval); 
+        sendMessage();
+      }
+  
+    }, 1000);
+  } 
+
+  function sendMessage() {
+      alert("You're time is up sucka")
+  }
+
+
+  //got this alert to happen in the setTime function, but doesn't happen simultaneously as timer
+  function question() {
+      alert("Commonly used data types do NOT include: ")
+  }
+
+
+
+  //Maybe just create one page first? 
+  //Do I need to make an html page for each question? 

@@ -1,4 +1,4 @@
-var startBtn = document.querySelector("#myBtn");
+var startBtn = document.querySelector("#startBtn");
 var timeEl = document.querySelector("#time");
 
 startBtn.addEventListener('click', setTime)

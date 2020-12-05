@@ -1,36 +1,28 @@
-var startBtn = document.querySelector("#startBtn");
-var timeEl = document.querySelector("#time");
+var questions = [
+  {
+      title: "Commonly used data types DO NOT include:",
+      choices: ["strings", "booleans", "alerts", "numbers"],
+      answer: "alerts"
+  },
+  {
+      title: "The condition in an if / else statement is enclosed within ____.",
+      choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
+      answer: "parentheses"
+  },
+  {
+      title: "Arrays in Javascript can be used to store ____.",
+      choices: ["numbers and strings", "other arrays", "booleans", "all of the above"],
+      answer: "all of the above"
+  },
+  {
+      title: "String values must be enclosed within ____ when being assigned to variables.",
+      choices: ["commas", "curly brackets", "quotes", "parenthesis"],
+      answer: "quotes"
+  },
+  {
+      title: "A very useful tool for used during development and debugging for printing content to the debugger is:",
+      choices: ["Javascript", "terminal / bash", "for loops", "console log"],
+      answer: "console log"
+  },
 
-startBtn.addEventListener('click', setTime)
-
-
-var secondsLeft = 10;
-
-function setTime() {
-    question()
-    var timerInterval = setInterval(function() { 
-      secondsLeft--;
-      timeEl.textContent = secondsLeft + " seconds left.";
-  
-      if(secondsLeft === 0) {
-        clearInterval(timerInterval); 
-        sendMessage();
-      }
-  
-    }, 1000);
-  } 
-
-  function sendMessage() {
-      alert("You're time is up sucka")
-  }
-
-
-  //got this alert to happen in the setTime function, but doesn't happen simultaneously as timer
-  function question() {
-      alert("Commonly used data types do NOT include: ")
-  }
-
-
-
-  //Maybe just create one page first? 
-  //Do I need to make an html page for each question? 
+];

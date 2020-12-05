@@ -3,53 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- This is the first step in making the document responsive but scaling the items to screen -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Jamie Morris Homework-4 Code Quiz -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- This is the style links -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Document</title>
+
+    <!-- This is the title-->
+    <title>Code Quiz</title>
 </head>
 
 <body>
-    <!--LINK TO OTHER HTML HERE-->
+    <!-- Link to highscores -->
+    <a href="HighScores.html">View Highscores</a>
+    <!-- This is a wrapper -->
     <div id="wrapper">
-
-        <div id="Questions">
+        <!-- Div for timer -->
+        <div id="currentTime"></div>
+        <!-- Div for quiz content -->
+        <div id="questionsDiv">
             <h1>Coding Quiz Challenge</h1>
-            <p>Try to answer the following code-related questions within the time limit. Keep in mind that inocrrect answers
-                will penalize your score time by ten seconds!</p>
+
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
+                answers
+                will penalize your score/time by ten seconds!</p>
+                
+            <ul id="choicesUl"></ul>
+
+            <!-- Buttons -->
+            <button id="startTime">Start Quiz</button>
         </div>
 
-        <div id="time"></div>
-
-        <button id="startBtn" class="btn">Start</button>
-
-        <script src="script.js"></script>
     </div>
+
+
+    <script src="questions.js"></script>
+
+
 </body>
 
 </html>
-
-
-<!-- 
-    Start button
-    when it's clicked
-    a timer starts and 
-    user is presented with a question
-    user answers question and is presented w another question
-    if answer is wrong, 
-    time is subtracted from the clock
-    when all questions are answered OR clock = 0,
-    the game is over
-    when game is over
-    user can save their initials and their score
-
-
-    What do we need? 
-    start button
-    prompts
-    variable to store answer to prompt   .value? 
-    timer
-    how to subtract time from timer? 
-    keep track of users answers 
-    calculate their answers into a score? 
-    variable to store their score and initials
- -->

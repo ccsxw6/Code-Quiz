@@ -26,3 +26,33 @@ var questions = [
   },
 
 ];
+
+var currentTime = document.querySelector("#currentTime");
+var timer = document.querySelector("#startTime");
+var questionsDiv = document.querySelector("#questionsDiv");
+var wrapper = document.querySelector("#wrapper");
+
+
+var secondsLeft = 76;
+var holdInterval = 0;
+var penalty = 10;
+var ulCreate = document.createElement("ul");
+var score = 0;
+var questionIndex = 0;
+
+timer.addEventListener("click", function () {
+  // We are checking zero because its originally set to zero
+  if (holdInterval === 0) {
+      holdInterval = setInterval(function () {
+          secondsLeft--;
+          currentTime.textContent = "Time: " + secondsLeft;
+
+          if (secondsLeft <= 0) {
+              clearInterval(holdInterval);
+              allDone();
+              currentTime.textContent = "Time's up!";
+          }
+      }, 1000);
+  }
+  render(questionIndex);
+});

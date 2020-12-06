@@ -6,20 +6,20 @@ This is a project that asks the user various multiple choice coding questions. T
 ## Mock Up
 
 ## Initial Page
-![Initial-Page](images\start_quiz.PNG)
+![Initial-Page](images/start_quiz.PNG)
 
 ## Sample Question Page
 Here is a sample question. The user chose the correct answer in this example, and is notified that they answered correctly underneat the questions. 
-![Sample-Question](images\question.PNG)
+![Sample-Question](images/question.PNG)
 
 ## Submit Initials and Score Page
 Here the user can enter their initials and submit their score and initials to the Highschores page. 
-![Submit-Initials-&-Score](images\all_done.PNG)
+![Submit-Initials-&-Score](images/all_done.PNG)
 
 
 ### High Scores Page
 Here is the High Scores page. The user can access this link by clicking on the "Highscores" link in the top left corner of the webpage. The user has the option to clear their high scores and to go back to the beginning of the quiz by clicking either the "Clear Highscore" button or the "Go Back" button.  
-![High-Scores](images\highscores.PNG)
+![High-Scores](images/highscores.PNG)
 
 ## Deployment
 

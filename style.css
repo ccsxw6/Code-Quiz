@@ -1,15 +1,23 @@
-#wrapper {
-    order: 1px solid red;
-    left: 30%;
-    top: 20%;
-    height: 500px;
-    width: 500px;
-    position: absolute;
-}
-#startTime {
+#startBtn {
     background-color: red;
     color: white;
     font-size: 20px;
     margin-left: 33%;
     padding: 15px 32px;
 }
+#wrapper {
+    border: 1px solid red;
+    left: 30%;
+    top: 20%;
+    height: 500px;
+    width: 500px;
+    position: absolute;
+}
+#questionsDiv {
+    margin: 20px;
+}
+
+#currentTime {
+    float: right;
+}
+

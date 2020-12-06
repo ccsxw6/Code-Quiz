@@ -1,10 +1,10 @@
-#startBtn {
-    background-color: red;
-    color: white;
-    font-size: 20px;
-    margin-left: 33%;
-    padding: 15px 32px;
+#questionsDiv {
+    margin: 20px;
 }
+#currentTime {
+    float: right;
+}
+
 #wrapper {
     border: 1px solid red;
     left: 30%;
@@ -13,11 +13,79 @@
     width: 500px;
     position: absolute;
 }
-#questionsDiv {
-    margin: 20px;
+#startBtn {
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    margin-left: 33%;
+    padding: 15px 32px;
 }
 
-#currentTime {
-    float: right;
+
+#backBtn {
+    background-color: red;
+    color: white;
+    position: relative;
+    padding: 15px;
+    top: 30%;
+    left: 55%;
+    width: auto;
+    text-align: center;
+    font-size: 15px;
 }
 
+#clearBtn {
+    background-color: red;
+    color: white;
+    position: relative;
+    padding: 15px;
+    top: 30%;
+    right: 5%;
+    font-size: 15px;
+    text-align: center;
+}
+
+#submit {
+    background-color: red;
+    color: white;
+    margin-left: 33%;
+    padding: 15px;
+    font-size: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+input {
+    border: 1px solid red;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+h1 {
+    text-align: center;
+}
+
+li {
+    background-color: red;
+    color: white;
+    margin-top: 10px;
+    padding: 5px 15px;
+    width: 80%;
+    font-size: 18px;
+}
+
+#newDiv {
+    border-top: 1px solid red;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+
+@media (max-width: 640px) {
+#wrapper {
+    position: absolute;
+    left: 30%;
+    right: 30%
+}
+}

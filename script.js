@@ -122,7 +122,7 @@ function final() {
       var timeLeft = secondsLeft;
       var anotherP = document.createElement("p");
       clearInterval(startInterval);
-      createP.textContent = "Your final score is: " + timeLeft;
+      createP.textContent = "Your time remaining is: " + timeLeft + " seconds";
       questionsDiv.appendChild(anotherP);
   }
 

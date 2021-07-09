@@ -14,6 +14,7 @@
     position: absolute;
 }
 #startBtn {
+    cursor: pointer;
     background-color: red;
     color: white;
     font-size: 15px;
@@ -23,6 +24,7 @@
 
 
 #backBtn {
+    cursor: pointer;
     background-color: red;
     color: white;
     position: relative;
@@ -35,6 +37,7 @@
 }
 
 #clearBtn {
+    cursor: pointer;
     background-color: red;
     color: white;
     position: relative;
@@ -46,6 +49,7 @@
 }
 
 #submit {
+    cursor: pointer;
     background-color: red;
     color: white;
     margin-left: 33%;
@@ -67,6 +71,7 @@ h1 {
 }
 
 li {
+    cursor: pointer;
     background-color: red;
     color: white;
     margin-top: 10px;

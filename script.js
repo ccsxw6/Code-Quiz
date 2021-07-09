@@ -36,25 +36,33 @@ var secondsLeft = 76;
 var startInterval = 0;
 var score = 0;
 
+
+// 
 startBtn.addEventListener("click", function () {
   if (startInterval === 0) {
       startInterval = setInterval(function () {
+        // start subtracting seconds - does this every 1000ms
           secondsLeft--;
+          // updating Time Interval 
           currentTime.textContent = "Time: " + secondsLeft;
 
           if (secondsLeft <= 0) {
+            // if time is up, stop the event and call the final function 
               clearInterval(startInterval);
               final();
               currentTime.textContent = "Time's up!";
           }
       }, 1000);
   }
+  // if they get the question correct, call the make function?
   make(questionIndex);
 });
 
 var questionIndex = 0;
 var newUl = document.createElement("ul");
 
+
+// passing in 0, looping through the user questions and adding them 
 function make(questionIndex) {
   newUl.innerHTML = ""; 
   questionsDiv.innerHTML = "";
@@ -64,25 +72,35 @@ function make(questionIndex) {
       questionsDiv.textContent = userQuestion;
   }
 
+  // looping through the question choices
   userChoices.forEach(function (newItem) { 
       var listItem = document.createElement("li"); 
+      // setting the content of each li to the current iteration of the question choice
       listItem.textContent = newItem; 
+      // appending the ul to questionsDiv
       questionsDiv.appendChild(newUl);
+      // appending the li to the ul
       newUl.appendChild(listItem); 
+      // call checkMatch when one of the list items is clicked
       listItem.addEventListener("click", (checkMatch)); 
   })
 }
 
 var penalty = 10;
 
+// passing in the click event
 function checkMatch(event) {
   var checkElement = event.target;
 
+  // if the user clicked on a li element
   if (checkElement.matches("li")) { 
-
+      // create a new div
       var newDiv = document.createElement("div"); 
+      // give that new div an id of newDiv
       newDiv.setAttribute("id", "newDiv");
+      // if the text content of what the user clicked on is equal to the question's answer
       if (checkElement.textContent == userQuestions[questionIndex].answer) { 
+        // add 1 to the score
           score++;
           newDiv.textContent = "Correct! The answer is:  " + userQuestions[questionIndex].answer;
          
@@ -92,8 +110,10 @@ function checkMatch(event) {
       }
 
   }
+  // add 1 to the questionIndex (to go to the next question)
   questionIndex++;
 
+  // if they've gone through all of the questions
   if (questionIndex >= userQuestions.length) {
       final();
       newDiv.textContent = "End of quiz!" + " " + "You recieved  " + score + "/" + userQuestions.length + " Correct!";
@@ -101,8 +121,9 @@ function checkMatch(event) {
       make(questionIndex);
   }
   questionsDiv.appendChild(newDiv);
-
 }
+
+// reset innerhtml
 function final() {
   currentTime.innerHTML = "";
   questionsDiv.innerHTML = "";
@@ -117,7 +138,7 @@ function final() {
   createP.setAttribute("id", "createP");
   questionsDiv.appendChild(createP);
 
-  
+  // if there was still time remaining  
   if (secondsLeft >= 0) {
       var timeLeft = secondsLeft;
       var anotherP = document.createElement("p");
